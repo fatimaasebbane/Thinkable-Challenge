@@ -1,2 +1,6 @@
 npm install --save-dev jest
 npm install mongodb
+npm install prisma --save-dev
+npm install @prisma/client mongodb
+## pour charger ces variables d'environnement
+npm install dotenv
