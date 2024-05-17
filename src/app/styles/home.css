@@ -1,0 +1,36 @@
+.btn_danger {
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, hsl(0, 0%, 100%), #f0f6fa) !important;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    color: rgb(136, 143, 247);
+    font-size: 1.8rem;
+    box-shadow: 1px 10px 2rem rgba(34, 25, 25, 0.5);
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 150px !important;
+    
+  }
+  
+  .btn_danger:hover {
+    box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+  }
+  html {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #c0c9ce;
+    background: -webkit-linear-gradient(to right, #acaec2, #1488cc);
+    background: linear-gradient(to right, #a3a5c4, #1488cc);
+  }
+
+
