@@ -43,7 +43,7 @@ Implemented API routes in Next.js for handling CRUD operations.
 ## Setup Instructions
 ### Clone Repository:
 
-git clone <repository_url>
+git clone https://github.com/fatimaasebbane/Thinkable-Challenge.git
 cd Thinkable-Challenge
 
 ### Install Dependencies:
