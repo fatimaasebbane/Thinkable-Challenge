@@ -63,7 +63,7 @@ npm install
 
 ### Set Up Environment Variables:
 
-Create a .env.local file in the root directory.
+Create a .env file in the root directory.
 
 Add your MongoDB connection string:
 DATABASE_URL=<your_mongodb_connection_string>
