@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Thinkable Blog Application
+This is a simple blog application developed using Next.js, MongoDB, and Prisma.
 
-## Getting Started
+## Functional Requirements
 
-First, run the development server:
+### Create New Blog Post:
 
-```bash
+Users can create a new blog post by providing a title and content.
+
+Implemented with a form allowing users to input title and content.
+
+Backend API endpoint /posts handles the creation of new posts.
+
+### View List of Blog Posts:
+
+Users can view a list of all blog posts.
+
+Implemented with a page listing all posts retrieved from the backend API.
+
+### View Specific Blog Post:
+
+Users can view the details of a specific blog post.
+
+Implemented with a dynamic route to display individual post details.
+
+### Update Existing Blog Post:
+
+Users can update the title and content of an existing blog post.
+
+Implemented with a form allowing users to edit title and content.
+
+Backend API endpoint /posts/[id] handles the update of existing posts.
+
+### Delete Blog Post:
+
+Users can delete a blog post.
+
+Implemented with a button to delete a post.
+
+Backend API endpoint /posts/[id] handles the deletion of posts.
+
+## Technical Stack
+### Frontend:
+Developed with Next.js for server-side rendering and routing.
+
+Used MongoDB for database storage.
+
+### Backend:
+Leveraged Prisma as the ORM for MongoDB integration.
+
+Implemented API routes in Next.js for handling CRUD operations.
+
+## Setup Instructions
+### Clone Repository:
+
+git clone https://github.com/fatimaasebbane/Thinkable-Challenge.git
+
+cd Thinkable-Challenge
+
+### Install Dependencies:
+
+npm install
+
+### Set Up Environment Variables:
+
+Create a .env file in the root directory.
+
+Add your MongoDB connection string:
+DATABASE_URL=<your_mongodb_connection_string>
+
+### Run the Application:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Access the Application:
+Open your browser and navigate to http://localhost:3000.
