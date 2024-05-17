@@ -17,10 +17,9 @@ const Page = async () => {
 
     return (
         <div className='w-[1200px] mx-auto py-20'>
-            <div className='top'>
-            <Link href={"/pages/create"} className='px-3 py-2 bg-zinc-900 hover:bg-zinc-800 rounded-md text-white'>Create</Link>
-        
-            </div>
+            <Link href={"/pages/create"} className='btn_danger'>Create new post</Link>
+            <br></br>
+            <br></br><br></br><br></br>
             <div className='grid grid-cols-3 gap-5 mt-8'>
                 {posts?.posts?.map((post: any, i: number) => (
                     <Item key={i} post={post} />
