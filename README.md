@@ -7,6 +7,7 @@ This is a simple blog application developed using Next.js, MongoDB, and Prisma.
 
 Users can create a new blog post by providing a title and content.
 Implemented with a form allowing users to input title and content.
+
 Backend API endpoint /posts handles the creation of new posts.
 
 ### View List of Blog Posts:
