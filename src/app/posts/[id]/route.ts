@@ -7,13 +7,22 @@ export const GET = async (
   req: NextRequest,
   context: { params: { id: string } }
 ) => {
-  const id = Number(context.params.id || 0);
+  const id = context.params.id;
 
-  const post = await prisma.post.findUnique({
-    where: {
-      id: id,
-    },
-  });
+  try {
+    const post = await prisma.post.findUnique({
+      where: {
+        id: id,
+      },
+    });
 
-  return NextResponse.json({ post });
+    if (post) {
+      return NextResponse.json({ post });
+    } else {
+      return NextResponse.json({ error: "Post not found" }, { status: 404 });
+    }
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
 };

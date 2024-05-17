@@ -31,7 +31,7 @@ export const POST = async (req: NextRequest) => {
 // Action to delete
 export const DELETE = async (req: NextRequest) => {
   const url = new URL(req.url).searchParams;
-  const id = Number(url.get("id")) || 0;
+  const id = url.get("id") || 0;
 
   const post = await prisma.post.delete({
     where: {
@@ -59,7 +59,7 @@ export const PUT = async (req: NextRequest) => {
 
   const post = await prisma.post.update({
     where: {
-      id: Number(id),
+      id: (id),
     },
 
     data: {
@@ -71,4 +71,4 @@ export const PUT = async (req: NextRequest) => {
   return NextResponse.json({
     post,
   });
-};
+}
