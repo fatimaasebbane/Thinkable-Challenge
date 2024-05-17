@@ -31,8 +31,7 @@ export const POST = async (req: NextRequest) => {
 // Action to delete
 export const DELETE = async (req: NextRequest) => {
   const url = new URL(req.url).searchParams;
-  const id = url.get("id") || 0;
-
+  const id = url.get("id")?.toString() || "0";
   const post = await prisma.post.delete({
     where: {
       id: id,

@@ -6,7 +6,6 @@ import '../../../styles/create.css'
 
 const Page = ({ params }: { params: { id: string } }) => {
 
-    // The update page will need an id in a url
     const id = params.id
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
@@ -17,10 +16,8 @@ const Page = ({ params }: { params: { id: string } }) => {
         e.preventDefault()
 
         setIsLoading(true)
-
-        // Because this is a client side (because we use 'use client on top'), so we don't have to add http in the api
         await fetch('/posts', {
-            method: 'PUT', // Method put is to update
+            method: 'PUT', 
             headers: {
                 'Content-Type': 'application/json'
             },

@@ -3,10 +3,8 @@ import React from 'react'
 import Item from './item_post'
 import './styles/home.css'
 const getPosts = async () => {
-    // Because this is server components, we have to define the URL with http
+   
     const res = await fetch(process.env.BASE_URL + '/posts', { next: { revalidate: 0 } })
-
-    // Define the output to json, because if only res, it will return by any type
     const json = await res.json()
     return json
 }

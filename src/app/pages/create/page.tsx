@@ -14,10 +14,8 @@ const Page = () => {
         e.preventDefault()
 
         setIsLoading(true)
-
-        // Because this is a client side (because we use 'use client on top'), so we don't have to add http in the api
         await fetch('/posts', {
-            method: 'POST', // Method put is to create
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },

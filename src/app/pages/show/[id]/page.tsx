@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation'; // Notez l'utilisation de useParams
+import { useParams } from 'next/navigation'; 
 import { Post } from '@prisma/client/wasm';
 import '../../../styles/show.css'
 
 const ShowPost: React.FC = () => {
-    const { id } = useParams(); // Récupère l'ID à partir des paramètres de l'URL
+    const { id } = useParams(); 
     const [post, setPost] = useState<Post | null>(null);
     const [loading, setLoading] = useState(true);
 
