@@ -3,6 +3,9 @@
 import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import '../../../styles/create.css'
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; 
+
 
 const Page = ({ params }: { params: { id: string } }) => {
 
@@ -59,8 +62,13 @@ const Page = ({ params }: { params: { id: string } }) => {
             </div>
         <form className='w-[500px] mx-auto pt-20 flex flex-col gap-2' onSubmit={handleSubmit}>
             <input type="text" placeholder='Input your title' value={title} onChange={(e) => setTitle(e.target.value)} className='w-full border p-2 rounded-md' />
-            <textarea rows={10} placeholder='Input your content' value={content} onChange={(e) => setContent(e.target.value)} className='w-full border p-2 rounded-md' />
-            <button disabled={isLoading}>{isLoading ? 'Loading ...' : 'Update'}</button>
+        <ReactQuill
+            value={content}
+            onChange={setContent}
+            placeholder="Input your content"
+            className='w-full border p-2 rounded-md'/>
+            
+ <button disabled={isLoading}>{isLoading ? 'Loading ...' : 'Update'}</button>
         </form>
         </div>
     )

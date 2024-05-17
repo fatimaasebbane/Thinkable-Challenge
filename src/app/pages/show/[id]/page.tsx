@@ -45,9 +45,11 @@ const ShowPost: React.FC = () => {
             <div className="card first">
               <h1 className="title_post">{post.title}</h1>
               <p className="date">{post.createdAt}</p>
-              <p className="text">
-                {post.content}
-                </p>
+              <div
+                className="mb-4"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+                >
+                </div>
               </div>
           </div>
         </div>

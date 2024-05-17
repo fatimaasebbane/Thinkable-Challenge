@@ -29,7 +29,11 @@ const Item: React.FC<Props> = ({ post }) => {
             <div className="container_copy">
                 <h3>{post.createdAt}</h3>
                 <h1>{post.title}</h1>
-                <p>{post.content}</p>
+                <div style={{fontSize:"20px"}}
+                className="mb-4"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+                ></div>
+                <br></br>
                 <a className="btn_primary" onClick={() => router.push(`/pages/show/${post.id}`)}>Read More</a>
                 <div className='flex justify-end mt-4'>
                     <button
