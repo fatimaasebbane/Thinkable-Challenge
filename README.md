@@ -50,6 +50,12 @@ Leveraged Prisma as the ORM for MongoDB integration.
 
 Implemented API routes in Next.js for handling CRUD operations.
 
+## Testing
+Unit Tests:
+Included unit tests to ensure code quality and reliability.
+Used Jest and Testing Library for writing and executing tests.
+
+
 ## Setup Instructions
 ### Clone Repository:
 
